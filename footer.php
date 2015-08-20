@@ -1,5 +1,15 @@
 <footer>
   <div class="container">
+    <!-- NAVBAR -->
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'footer-menu'
+        )); ?>
+
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'social-menu'
+        )); ?>
     <p>&copy; HackerYou <?php echo date('Y'); ?></p>
   </div>
 </footer>

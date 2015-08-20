@@ -28,10 +28,7 @@
         </a>
       </h1>
     </header>
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_locations' => 'primary'
-    )); ?>
+
   </div> <!-- /.container -->
 </header><!--/.header-->
 

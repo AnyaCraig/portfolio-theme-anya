@@ -7,12 +7,15 @@
 * Author URI: http://hackeryou.com
 */
 
+
 @import 'normalize';
+@import 'variables';
 @import 'typography';
 @import 'navigation';
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+
 /*
 ====================================
 Default Styling
@@ -28,14 +31,13 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	// max-width: 1200px;
 	margin: 0 auto;
 }
 
 .content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+	width: 100%;
+	
 }
 
 .full {
@@ -43,9 +45,57 @@ body {
 }
 
 
+/* ====================== HEADER STYLES ========================= */
 
+.header {
+	background: url(Images/octopus-rubber-stamp.jpg) no-repeat center center fixed; 
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+/* ====================== ABOUT SECTION ========================= */
 
+.about {
+	background: lavender;
+}
+/* ====================== SKILLS SECTION ======================== */
 
+.skills {
+	background: hotpink;
+}
 
+/* ====================== PORTFOLIO SECTION ===================== */
+
+.portfolio {
+	background: pink;
+}
+
+.portfolio-item {
+	height: 300px;
+	border: 2px solid red;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.portfolio-item-left,
+.portfolio-item-right {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+.portfolio-item-left {
+	border: 1px dotted hotpink;
+}
+
+.portfolio-item-right {
+	border: 2px dashed green;
+}
+
+/* ====================== CONTACT SECTION ======================== */
+
+.contact {
+	background: $coral;
+}
 
 
