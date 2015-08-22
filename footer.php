@@ -1,16 +1,14 @@
 <footer>
   <div class="container">
     <!-- NAVBAR -->
+      <div class="footer-nav">
         <?php wp_nav_menu( array(
           'container' => false,
           'theme_location' => 'footer-menu'
         )); ?>
 
-        <?php wp_nav_menu( array(
-          'container' => false,
-          'theme_location' => 'social-menu'
-        )); ?>
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+    <p>&copy; Anya Craig <?php echo date('Y'); ?></p>
+    </div>
   </div>
 </footer>
 

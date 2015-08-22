@@ -12,6 +12,7 @@
 
   <!-- Getting fonts and fontawesome -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Homemade+Apple|Raleway:300,400,700' rel='stylesheet' type='text/css'>
 
   <?php wp_head(); ?>
 </head>
@@ -19,16 +20,5 @@
 
 <body <?php body_class(); ?>>
 
-<header>
-  <div class="container">
-    <header>
-      <h1>
-        <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-          <?php bloginfo( 'name' ); ?>
-        </a>
-      </h1>
-    </header>
 
-  </div> <!-- /.container -->
-</header><!--/.header-->
 

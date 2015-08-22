@@ -10,10 +10,36 @@ ul.menu {
 			padding: 10px;
 			background: #333;
 			color: white;
+			font-family: "Raleway", sans-serif;
+
 		}
 	}
 }
 
 .top-menu {
 	background: black;
+	height: 80px;
+	border-bottom: 3px solid $coral;
+	color: white;
+
+
 }
+
+
+ul.menu li a {
+	background: none;
+	line-height: 80px;
+	// text-shadow: 1px 1px 0 $coral;
+	margin: 0 30px;
+	text-transform: lowercase;
+	font-size: 1.2em;
+
+
+}
+.footer-nav {
+	text-align: center;
+}
+.footer-nav ul li a {
+	color: black;
+}
+/* Background pattern from subtlepatterns.com */

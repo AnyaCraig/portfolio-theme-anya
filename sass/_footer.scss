@@ -1,4 +1,9 @@
 footer {
 	clear: both;
-	background: black;
+	background-image: url(Images/contemporary_china_white.png);
+	border-top: 3px solid $coral;
+	
+	p {
+		margin: 40px 0 10px 0;
+	}
 }

@@ -1,16 +1,43 @@
+/* CUSTOM FONTS */
+
+@font-face {
+	font-family: thunder;
+    src: url(Fonts/thunder.ttf);
+}
+body {
+	font-size: 15px;
+	color: black;
+	font-family: "Raleway", san-serif;
+}
 a {
-	color: #BA209B;
 	text-decoration: none;
-	&:hover {
-		color: #D424B1;
-	}
 }
 /* headings */
 h1, h2, h3, h4, h5 {
 	margin: 0;
+	padding: 30px 0 15px 0;
+	font-family: "Homemade Apple", "Raleway", sans-serif;
+	color: $coral;
 }
 h1 {
 	color: $coral;
+	font-family: "thunder", "Raleway", sans-serif;
+	position: relative;
+	top: 500px;
+	font-size: 55px;
+	text-shadow: 2px 2px 0 black;
+	letter-spacing: 5px;
+}
+
+h3 {
+	font-size: 30px;
+}
+.header h2 {
+	position: relative;
+	top: 460px;
+	font-family: "Raleway", sans-serif;
+	font-weight: 300;
+	color: black;
 }
 /* paragraphs */
 

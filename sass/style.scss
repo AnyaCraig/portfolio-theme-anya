@@ -43,39 +43,59 @@ body {
 .full {
 	width: 100%;
 }
+/* ====================== HELPER STYLES ========================= */
 
+.wrapper-wide {
+	max-width: 1000px;
+	margin: 0 auto;
+	// background: rgba(244,244,244,0.5);
+}
+
+// .wrapper-narrow {
+// 	max-width: 50%;
+// 	margin: 0 10% 0 40%;
+// }
 
 /* ====================== HEADER STYLES ========================= */
 
 .header {
-	background: url(Images/octopus-rubber-stamp.jpg) no-repeat center center fixed; 
- 	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
+	background: url(Images/octopus-rubber-stamp-background.jpg) no-repeat fixed; 
+	background-color: rgba(255,255,255, 0.9);
+	background-blend-mode: screen;
+  	background-size: auto 100%;
+  	background-position: right;
+  	height: calc(100vh - 80px);
 }
 /* ====================== ABOUT SECTION ========================= */
 
 .about {
-	background: lavender;
+	min-height: 400px;
+	background: url(Images/good-headshot-wide.jpg);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	padding-left: 30%;
+
 }
 /* ====================== SKILLS SECTION ======================== */
 
 .skills {
-	background: hotpink;
+	background-image: url(Images/contemporary_china.png);
+	color: white;
 }
 
 /* ====================== PORTFOLIO SECTION ===================== */
 
 .portfolio {
-	background: pink;
+	background-image: url(Images/contemporary_china_white.png);
 }
 
 .portfolio-item {
-	height: 300px;
+	height: auto;
 	border: 2px solid red;
-	width: 50%;
+	width: 100%;
 	margin: 0 auto;
+	clear: both;
+	overflow: hidden;
 }
 
 .portfolio-item-left,
@@ -84,8 +104,14 @@ body {
 	width: 50%;
 	height: 100%;
 }
+
 .portfolio-item-left {
 	border: 1px dotted hotpink;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
 }
 
 .portfolio-item-right {
@@ -95,7 +121,59 @@ body {
 /* ====================== CONTACT SECTION ======================== */
 
 .contact {
-	background: $coral;
+	background: url(Images/octopus-inverse-background.jpg);
+	background-color: rgba(0,0,0, 0.75);
+	background-blend-mode: multiply;
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 600px;
+	overflow: auto;
+
+	p {
+		color: white;
+		margin-top: 15px;
+	}
 }
 
 
+
+input[type=text],
+input[type=email],
+textarea {
+	width: 70%;
+	background: rgba(255, 255, 255, 0.6);
+	border: none;
+	border-right: 3px solid $coral;
+	border-bottom: 3px solid $coral;
+	height: 45px;
+}
+
+textarea {
+	height: 200px;
+	
+}
+
+input[type=submit] {
+	width: 150px;
+	margin: 25px 0;
+	height: 40px;
+	border: 3px solid $coral;
+	background: transparent;
+	color: white;
+	font-size: 1.2em;
+}
+
+.contact div.wpcf7-response-output,
+.contact div.wpcf7-validation-errors {
+	border: none;
+	border: 3px solid white;
+	background: transparent;
+	color: gold;
+	width: auto;
+	margin: 0 0 25px 0;
+}
+
+.contact span.wpcf7-not-valid-tip {
+	color: gold;
+}
