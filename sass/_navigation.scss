@@ -21,7 +21,8 @@ ul.menu {
 	height: 80px;
 	border-bottom: 3px solid $coral;
 	color: white;
-
+	position: relative;
+	z-index: 150;
 
 }
 

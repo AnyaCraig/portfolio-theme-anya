@@ -8,6 +8,7 @@
         )); ?>
 
     <p>&copy; Anya Craig <?php echo date('Y'); ?></p>
+
     </div>
   </div>
 </footer>
@@ -20,6 +21,8 @@
  s.parentNode.insertBefore(g,s)}(document,"script"));
 </script>
 
-<?php wp_footer(); ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script> 
+
 </body>
 </html>
