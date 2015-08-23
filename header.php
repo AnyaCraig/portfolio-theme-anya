@@ -12,7 +12,7 @@
 
   <!-- Getting fonts and fontawesome -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Homemade+Apple|Raleway:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Homemade+Apple|Raleway:300,400,700|Cabin+Sketch:700' rel='stylesheet' type='text/css'>
 
   <?php wp_head(); ?>
 </head>

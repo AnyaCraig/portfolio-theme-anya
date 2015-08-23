@@ -29,7 +29,9 @@ get_header();  ?>
         <div class="wrapper-narrow">
 
           <h3><?php the_field("about-title"); ?></h3>
-          <p><?php the_field("about-text") ?></p>
+          <p><?php the_field("about-text"); ?></p>
+
+          <h3><?php the_field("social-media-title"); ?></h3>
 
           <?php wp_nav_menu( array(
             'container' => false,
@@ -64,7 +66,10 @@ get_header();  ?>
             </div> <!-- /.skill-item -->
           <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
-          
+
+
+            <button class="resume">Download my resume</button>    
+
         </div> <!-- /.wrapper-wide -->
       </section> <!-- /.skills -->
 
@@ -93,10 +98,11 @@ get_header();  ?>
                 <img src="<?php echo $image['url'] ?>" alt="">
               </div> <!-- /.portfolio-item-left -->
               <div class="portfolio-item-right clearfix">
-                <?php the_field('portfolio-item-title'); ?>
-                <?php the_field('client_name'); ?>
-                <?php the_field('technologies'); ?>
-                <?php the_field('portfolio-item-description'); ?>
+                <h4><?php the_field('portfolio-item-title'); ?></h4>
+                <h5><?php the_field('client_name'); ?><h5>
+                <h6><?php the_field('technologies'); ?><h6>
+                <p><?php the_field('portfolio-item-description'); ?></p>
+                <button class="view-live">View live</button>
               </div> <!-- /.portfolio-item-right -->
             </div> <!-- /.portfolio-item -->
           <?php endwhile; ?>

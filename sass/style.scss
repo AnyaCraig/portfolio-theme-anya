@@ -73,7 +73,7 @@ body {
 	background: url(Images/good-headshot-wide.jpg);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
-	padding-left: 30%;
+	padding-left: 35%;
 
 }
 /* ====================== SKILLS SECTION ======================== */
@@ -81,7 +81,34 @@ body {
 .skills {
 	background-image: url(Images/contemporary_china.png);
 	color: white;
+	overflow: auto;
 }
+
+.skill-item {
+	float: left;
+	margin: 25px 25px 25px 0;
+	border-bottom: 3px solid $coral;
+	padding-bottom: 3px;
+}
+button.resume {
+	clear: both;
+	display: block;
+	margin: 30px 0;
+	height: 40px;
+	border: 3px solid $coral;
+	background: transparent;
+	color: white;
+	font-size: 1.2em;
+	transition: .5s all ease-in-out;
+	padding-left: 20px;
+	padding-right: 20px;	
+}
+
+button.resume:hover {
+	color: $coral;
+	border: 3px solid white;
+}
+
 
 /* ====================== PORTFOLIO SECTION ===================== */
 
@@ -90,32 +117,62 @@ body {
 }
 
 .portfolio-item {
-	height: auto;
-	border: 2px solid red;
+	height: 330px;
+	border-top: 3px solid black;
+	border-right: 3px solid $coral;
+	border-bottom: 3px solid $coral;
+	border-left: 3px solid black;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 30px auto;
 	clear: both;
 	overflow: hidden;
+	background: black;
 }
 
 .portfolio-item-left,
 .portfolio-item-right {
 	float: left;
 	width: 50%;
-	height: 100%;
+	// height: 100%;
 }
 
 .portfolio-item-left {
-	border: 1px dotted hotpink;
+	
 
 	img {
 		width: 100%;
-		height: auto;
+		height: 100%;
 	}
 }
 
 .portfolio-item-right {
-	border: 2px dashed green;
+
+	padding: 25px;
+
+	h4 {
+		font-size: 25px;
+		margin-top: 0;
+		padding: 0;
+	}
+	
+	button.view-live {
+		display: block;
+		margin: 30px 0;
+		height: 40px;
+		border: 3px solid $coral;
+		background: transparent;
+		color: black;
+		font-size: 1.2em;
+		transition: .5s all ease-in-out;
+		padding-left: 20px;
+		padding-right: 20px;	
+	}
+
+	button.view-live:hover {
+		color: $coral;
+		border: 3px solid white;
+	}
+		
 }
 
 /* ====================== CONTACT SECTION ======================== */
@@ -162,6 +219,12 @@ input[type=submit] {
 	background: transparent;
 	color: white;
 	font-size: 1.2em;
+	transition: .5s all ease-in-out;
+}
+
+input[type=submit]:hover {
+	color: $coral;
+	border: 3px solid white;
 }
 
 .contact div.wpcf7-response-output,
