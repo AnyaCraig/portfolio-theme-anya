@@ -87,8 +87,11 @@ body {
 .skill-item {
 	float: left;
 	margin: 25px 25px 25px 0;
-	border-bottom: 3px solid $coral;
+	// border-bottom: 3px solid $coral;
 	padding-bottom: 3px;
+	color: $coral;
+	font-weight: 600;
+	font-size: 1.1em;
 }
 button.resume {
 	clear: both;
@@ -117,7 +120,7 @@ button.resume:hover {
 }
 
 .portfolio-item {
-	height: 330px;
+	height: 380px;
 	border-top: 3px solid black;
 	border-right: 3px solid $coral;
 	border-bottom: 3px solid $coral;
@@ -126,7 +129,8 @@ button.resume:hover {
 	margin: 0 auto 30px auto;
 	clear: both;
 	overflow: hidden;
-	background: black;
+	// background-image: url(Images/contemporary_china.png);
+	background: rgba(0,0,0,0.88);
 }
 
 .portfolio-item-left,
@@ -141,7 +145,6 @@ button.resume:hover {
 
 	img {
 		width: 100%;
-		height: 100%;
 	}
 }
 
@@ -153,6 +156,16 @@ button.resume:hover {
 		font-size: 25px;
 		margin-top: 0;
 		padding: 0;
+		padding-bottom: 25px;
+	}
+
+	p, h5, h6 {
+		color: white;
+		font-size: 1em;
+		padding: 0;
+		margin: 0 0 20px 0;
+		font-family: "Raleway", sans-serif;
+		font-weight: 300;
 	}
 	
 	button.view-live {
@@ -161,7 +174,7 @@ button.resume:hover {
 		height: 40px;
 		border: 3px solid $coral;
 		background: transparent;
-		color: black;
+		color: white;
 		font-size: 1.2em;
 		transition: .5s all ease-in-out;
 		padding-left: 20px;

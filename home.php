@@ -99,10 +99,10 @@ get_header();  ?>
               </div> <!-- /.portfolio-item-left -->
               <div class="portfolio-item-right clearfix">
                 <h4><?php the_field('portfolio-item-title'); ?></h4>
-                <h5><?php the_field('client_name'); ?><h5>
+                <h5><?php the_field('client-name'); ?></h5>
                 <h6><?php the_field('technologies'); ?><h6>
                 <p><?php the_field('portfolio-item-description'); ?></p>
-                <button class="view-live">View live</button>
+                <button class="view-live"><?php the_field('view-live'); ?></button>
               </div> <!-- /.portfolio-item-right -->
             </div> <!-- /.portfolio-item -->
           <?php endwhile; ?>
