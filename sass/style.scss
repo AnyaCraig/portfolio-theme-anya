@@ -79,6 +79,12 @@ body {
 .site-headings {
 	margin-top: 40%;
 	margin-left: 8%;
+	transition: .5s all ease-in-out;
+}
+
+.site-headings:hover {
+	transform: scale(1.1);
+	transform-origin: left bottom;
 }
 
 /* EXTRA NAV STYLES */
@@ -348,14 +354,15 @@ input[type=submit]:hover {
 	}
 }
 @media(max-width:1100px) {
-	.site-headings {
-		margin-left: 8%;
-	}
+
 
 	.header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+	.site-headings:hover {
+		transform-origin: center center;
 	}
 	.about {
 		background-image: none;
@@ -476,7 +483,7 @@ input[type=submit]:hover {
 	}
 
 	.wrapper-wide {
-		max-width: 250px;
+		max-width: 260px;
 	}
 
 	.portrait {

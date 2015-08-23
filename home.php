@@ -73,7 +73,7 @@ get_header();  ?>
               <?php wp_reset_postdata(); ?>
 
 
-              <button class="resume">Download my resume</button>    
+              <button class="resume">download my resume</button>    
 
           </div> <!-- /.wrapper-wide -->
         </section> <!-- /.skills -->
@@ -107,7 +107,7 @@ get_header();  ?>
                   <h5><?php the_field('client-name'); ?></h5>
                   <h6><?php the_field('technologies'); ?></h6>
                   <p><?php the_field('portfolio-item-description'); ?></p>
-                  <a href="<?php the_field('view-live'); ?>"><button class="view-live">View live</button></a>
+                  <a href="<?php the_field('view-live'); ?>"><button class="view-live">view live</button></a>
                 </div> <!-- /.portfolio-item-right -->
               </div> <!-- /.portfolio-item -->
             <?php endwhile; ?>
