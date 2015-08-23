@@ -28,7 +28,7 @@ img {
 
 body {
 	color: #333;
-	padding-top: calc(100vh - 80px);
+	/* padding-top: calc(100vh - 80px);*/
 }
 
 .container {
@@ -49,7 +49,7 @@ body {
 .wrapper-wide {
 	max-width: 1000px;
 	margin: 0 auto;
-	// background: rgba(244,244,244,0.5);
+	transition: .5s all ease-in-out;
 }
 
 .wrapper-narrow {
@@ -73,16 +73,22 @@ body {
   	background-position: right;
   	height: calc(100vh - 80px);
   	z-index: 100;
+  	overflow: auto;
+}
+
+.site-headings {
+	margin-top: 40%;
+	margin-left: 8%;
 }
 
 /* EXTRA NAV STYLES */
 
-.top-menu-scrolled,
+/*.top-menu-scrolled,
 .header {
 	position: fixed;
 	top: 0;
-	width: 100%;
-}
+	width: 100%;*/
+
 /* ====================== ABOUT SECTION ========================= */
 
 .about {
@@ -91,6 +97,7 @@ body {
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 	transition: 1s all ease-in-out;
+	overflow: auto;
 }
 
 .portrait {
@@ -101,7 +108,6 @@ body {
 	height: 250px;
 	border-radius: 50%;
 	margin: 0 auto;
-	border: 3px solid red;
 }
 /* ====================== SKILLS SECTION ======================== */
 
@@ -114,12 +120,12 @@ body {
 .skill-item {
 	float: left;
 	margin: 25px 25px 25px 0;
-	// border-bottom: 3px solid $coral;
 	padding-bottom: 3px;
 	color: $coral;
 	font-weight: 600;
 	font-size: 1.1em;
 }
+
 button.resume {
 	clear: both;
 	display: block;
@@ -165,12 +171,10 @@ button.resume:hover {
 .portfolio-item-right {
 	float: left;
 	width: 50%;
-	// height: 100%;
 }
 
 .portfolio-item-left {
 	
-
 	img {
 		width: 100%;
 	}
@@ -273,13 +277,13 @@ input[type=submit]:hover {
 	border: none;
 	border: 3px solid white;
 	background: transparent;
-	color: gold;
+	color: $orange;
 	width: auto;
 	margin: 0 0 25px 0;
 }
 
 .contact span.wpcf7-not-valid-tip {
-	color: gold;
+	color: $orange;
 }
 
 /* ========================== MEDIA QUERIES ============================== */
@@ -289,7 +293,7 @@ input[type=submit]:hover {
 	.wrapper-narrow {
 	
 		margin: 0 10% 0 31%;
-		border: 3px solid gold;
+
 	}
 }
 
@@ -297,7 +301,7 @@ input[type=submit]:hover {
 	.wrapper-narrow {
 	
 		margin: 0 10% 0 32%;
-		border: 3px solid red;
+
 	}
 }
 
@@ -305,7 +309,7 @@ input[type=submit]:hover {
 	.wrapper-narrow {
 		
 		margin: 0 10% 0 33%;
-		border: 3px solid blue;
+
 	}
 }
 
@@ -313,23 +317,20 @@ input[type=submit]:hover {
 	.wrapper-narrow {
 		max-width: 60%;
 		margin: 0 8% 0 35%;
-		border: 3px solid green;
+
 	}
 }
 
 @media(max-width: 1300px) {
 	.wrapper-narrow {
 		margin: 0 7% 0 36%;
-		border: 3px solid hotpink;
+
 	}
 }
 @media(max-width:1280px) {
 	.wrapper-narrow {
 		margin: 0 6% 0 40%;
-		border: 3px solid purple; 
-	}
-	.about {
-		background-color: white;
+	
 	}
 
 	.about ul.menu li a,
@@ -342,14 +343,23 @@ input[type=submit]:hover {
 		padding: 0;
 	}
 	
+	.wrapper-wide {
+		max-width: 900px;
+	}
 }
 @media(max-width:1100px) {
-	h1, h2 {
+	.site-headings {
 		margin-left: 8%;
+	}
+
+	.header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.about {
 		background-image: none;
-		background-color: white;
+		background-color: $whitish;
 	}
 	.wrapper-narrow {
 		margin: 0 auto;
@@ -362,9 +372,145 @@ input[type=submit]:hover {
 	}
 }
 
+
+@media(max-width: 1000px) {
+	.wrapper-wide {
+		max-width: 700px;
+	}
+	.skills p {
+		margin-bottom: 20px;
+	}
+	.skill-item {
+		margin:10px 25px 10px 0;
+	}
+	.portfolio-item {
+		height: auto;
+	}
+	.portfolio-item-left,
+	.portfolio-item-right {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+
+	.button.resume {
+		margin-top: 20px;
+	}
+}
+@media(max-width: 860px) {
+	
+	.top-menu ul.menu li,
+	.top-menu ul.menu li a {
+		margin: 0 10px;
+		padding: 0;
+	}
+}
+
+@media(max-width: 800px) {
+	.wrapper-wide {
+		max-width: 500px;
+	}
+	input[type=text],
+	input[type=email],
+	textarea {
+		width: 100%;
+	}
+}
 @media(max-width: 750px) {
-	h1, h2 {
+	h1, .header h2 {
 		text-align: center;
 		margin: 0;
 	}
+
+	.site-headings {
+		margin-left: 0;
+	}
+	.top-menu {
+		text-align: center;
+	}
+}
+
+@media(max-width: 600px) {
+	.top-menu ul.menu li,
+	.top-menu ul.menu li a {
+		display: block;
+		line-height: 50px;
+	}
+	.header {
+		height: calc(100vh - 260px);
+
+	}
+	.top-menu {
+		height: 260px;
+	}
+
+	.site-headings {
+		margin-top: 50%;
+	}
+
+	.wrapper-wide {
+		max-width: 400px;
+	}
+}
+
+@media(max-width: 520px) {
+	h1 {
+		font-size: 50px;
+	}
+
+	.header h2 {
+		font-size: 25px;
+	}
+
+	.wrapper-wide {
+		max-width: 300px;
+	}
+}
+
+@media(max-width: 400px) {
+	h1 {
+		font-size: 40px;
+	}
+	.header h2 {
+		font-size: 20px;
+	}
+
+	.wrapper-wide {
+		max-width: 250px;
+	}
+
+	.portrait {
+		width: 200px;
+		height: 200px;
+	}
+
+}
+
+@media(max-width: 320px) {
+	.header {
+		padding: 0 20px 0 20px;
+	}
+	h2, h3, h4, h5, h6 {
+		text-align: center;
+	}
+	
+	.portfolio-item-right button.view-live,
+	button.resume,
+	.contact input[type=submit] {
+		width: 100%;
+	}
+
+	.about, 
+	.skills, 
+	.portfolio, 
+	.contact {
+		text-align: center;
+		
+		ul.menu {
+			text-align: center;
+		}
+
+
+	}
+
 }

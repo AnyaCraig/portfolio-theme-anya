@@ -7,13 +7,14 @@ get_header();  ?>
 
     <div class="content clearfix">
     
-      <section class="header full clearfix">
-        <div class="wrapper-wide clearix">
+      <section class="header full clearfix" id="home">
 
-          <h1><?php the_field("site-title"); ?></h1>
-          <h2><?php the_field("site-subtitle"); ?></h2>
-
-        </div><!-- /.wrapper-wide -->
+        <div class="site-headings">
+          <a href="#about">
+            <h1><?php the_field("site-title"); ?></h1>
+            <h2><?php the_field("site-subtitle"); ?></h2>
+          </a>
+        </div><!-- /.site-headings -->
 
       </section> <!-- /.header-->
 
@@ -26,7 +27,7 @@ get_header();  ?>
       </section>
       
       <div class="under-menu">
-        <section class="about clearfix">
+        <section class="about clearfix" id="about">
           <div class="wrapper-narrow">
             <div class="portrait">
               <!-- <img src="Images/portrait.jpg"> -->
@@ -46,7 +47,7 @@ get_header();  ?>
 
         </section> <!-- /.about -->
 
-        <section class="skills clearfix"> 
+        <section class="skills clearfix" id="skills"> 
 
           <div class="wrapper-wide">
 
@@ -77,7 +78,7 @@ get_header();  ?>
           </div> <!-- /.wrapper-wide -->
         </section> <!-- /.skills -->
 
-        <section class="portfolio clearfix"> 
+        <section class="portfolio clearfix" id="portfolio"> 
 
           <div class="wrapper-wide">
           <h3><?php the_field('portfolio-title'); ?></h3>
@@ -106,7 +107,7 @@ get_header();  ?>
                   <h5><?php the_field('client-name'); ?></h5>
                   <h6><?php the_field('technologies'); ?></h6>
                   <p><?php the_field('portfolio-item-description'); ?></p>
-                  <button class="view-live"><?php the_field('view-live'); ?></button>
+                  <a href="<?php the_field('view-live'); ?>"><button class="view-live">View live</button></a>
                 </div> <!-- /.portfolio-item-right -->
               </div> <!-- /.portfolio-item -->
             <?php endwhile; ?>
@@ -119,7 +120,7 @@ get_header();  ?>
           
         </section> <!-- /.portfolio -->
 
-        <section class="contact clearfix">
+        <section class="contact clearfix" id="contact">
           <div class="wrapper-wide clearfix">
             <h3><?php the_field("contact-title"); ?></h3>
             <?php echo do_shortcode( '[contact-form-7 id="9" title="Contact form 1"]' ); ?>
