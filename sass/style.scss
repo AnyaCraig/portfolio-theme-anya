@@ -249,7 +249,11 @@ button.resume:hover {
 }
 
 .portfolio-item-left {
-	
+	padding-bottom: 50%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
 	img {
 		width: 100%;
 	}
@@ -448,11 +452,7 @@ p.email-link {
 @media(max-width:1100px) {
 
 
-	.header {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+
 	.site-headings:hover {
 		transform-origin: center center;
 	}
@@ -485,15 +485,23 @@ p.email-link {
 	.portfolio-item {
 		height: auto;
 	}
+
+	.portfolio-item-left {
+		height: 500px;
+	}
 	.portfolio-item-left,
 	.portfolio-item-right {
 		display: block;
 		float: none;
 		width: 100%;
 	}
-
-	.button.resume {
-		margin-top: 20px;
+	.button-holder {
+		clear: both;
+		padding-top: 20px;
+	}
+	button.resume {
+		clear:both;
+		margin-top: 0;
 	}
 
 	.about-left {
@@ -509,25 +517,12 @@ p.email-link {
 	}
 }
 @media(max-width: 860px) {
-	
-	.top-menu ul.menu li,
-	.top-menu ul.menu li a {
-		margin: 0 10px;
-		padding: 0;
+	.header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
-}
 
-@media(max-width: 800px) {
-	.wrapper-wide {
-		max-width: 500px;
-	}
-	input[type=text],
-	input[type=email],
-	textarea {
-		width: 100%;
-	}
-}
-@media(max-width: 750px) {
 	h1, .header h2 {
 		text-align: center;
 		margin: 0;
@@ -536,21 +531,67 @@ p.email-link {
 	.site-headings {
 		margin-left: 0;
 	}
+
+	.top-menu ul.menu li,
+	.top-menu ul.menu li a {
+		margin: 0 10px;
+		padding: 0;
+	}
 	.top-menu {
 		text-align: center;
 	}
+	.portfolio-item-left {
+		height: 400px;
+	}
+}
+
+@media(max-width: 800px) {
+	.header {
+		background: url(images/octopus-rubber-stamp-background-white.jpg) no-repeat fixed; 
+		background-color: transparent;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.wrapper-wide {
+		max-width: 500px;
+	}
+	.contact {
+		background: url(images/octopus-inverse-background-black.jpg);
+		background-color: transparent;
+		background-position: center center;
+	}
+	input[type=text],
+	input[type=email],
+	textarea {
+		width: 100%;
+	}
+
 }
 
 @media(max-width: 600px) {
+	body {
+		color: #333;
+		padding-top: 400px;
+	}
+
+	.site-headings {
+		margin-top: 100px;
+	}
+
+
+	.header {
+		height: 400px;
+	}
 	.top-menu ul.menu li,
 	.top-menu ul.menu li a {
 		display: block;
 		line-height: 50px;
 	}
 
-	.site-headings {
-		margin-top: 40vh;
-	}
+	// .site-headings {
+	// 	margin-top: 40vh;
+	// }
 
 	.wrapper-wide {
 		max-width: 400px;
@@ -580,6 +621,12 @@ p.email-link {
 }
 
 @media(max-width: 520px) {
+		
+	.header {
+		background: url(images/octopus-rubber-stamp-background-white-mobile.jpg) no-repeat fixed; 
+		background-size: 100%;
+	}
+
 	h1 {
 		font-size: 50px;
 	}
@@ -590,6 +637,9 @@ p.email-link {
 
 	.wrapper-wide {
 		max-width: 300px;
+	}
+	.portfolio-item-left {
+		height: 300px;
 	}
 }
 
@@ -624,6 +674,11 @@ p.email-link {
 	button.resume,
 	.contact input[type=submit] {
 		width: 100%;
+	}
+
+	.skill-item {
+		float: none;
+		display: inline-block;
 	}
 
 	.about, 

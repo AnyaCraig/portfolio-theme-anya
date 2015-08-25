@@ -92,8 +92,9 @@ get_header();  ?>
             <?php endwhile; ?>
               <?php wp_reset_postdata(); ?>
 
-
-              <button class="resume">download my resum&eacute;</button>    
+              <div class="button-holder">
+                <button class="resume">download my resum&eacute;</button>    
+              </div> <!-- /.button-holder -->
 
           </div> <!-- /.wrapper-wide -->
         </section> <!-- /.skills -->
@@ -120,16 +121,16 @@ get_header();  ?>
 
             <?php while ( $portfolioQuery->have_posts() ) : $portfolioQuery->the_post(); ?>
               <div class="portfolio-item clearfix">
-                <div class="portfolio-item-left clearfix">
                 <?php $image = get_field('portfolio-image') ?>
-                  <img src="<?php echo $image['url'] ?>" alt="">
+                <div class="portfolio-item-left clearfix" style="background-image: url(<?php echo $image["url"] ?>)">
+                 
                 </div> <!-- /.portfolio-item-left -->
                 <div class="portfolio-item-right clearfix">
                   <h4><?php the_field('portfolio-item-title'); ?></h4>
                   <h5><?php the_field('client-name'); ?></h5>
                   <h6><?php the_field('technologies'); ?></h6>
                   <p><?php the_field('portfolio-item-description'); ?></p>
-                  <a href="<?php the_field('view-live'); ?>"><button class="view-live">view live</button></a>
+                  <a href="<?php the_field('view-live'); ?>" target="_blank"><button class="view-live">view live</button></a>
                 </div> <!-- /.portfolio-item-right -->
               </div> <!-- /.portfolio-item -->
             <?php endwhile; ?>
