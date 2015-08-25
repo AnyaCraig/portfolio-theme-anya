@@ -24,30 +24,43 @@ get_header();  ?>
           'container' => false,
           'theme_location' => 'primary'
         )); ?>
+        <i class="fa fa-bars"></i>
       </section>
       
       <div class="under-menu">
-        <section class="about clearfix" id="about">
-          <div class="wrapper-narrow">
-            <div class="portrait">
-              <!-- <img src="Images/portrait.jpg"> -->
+        <section class="about clearfix">
+          <a name="about"></a>
+          <div class="wrapper-wide">
+            <div class="about-left">
+            <?php $image_url  = get_field('about-image') ?>
+              <img src="<?php echo $image_url['url'] ?> " alt="">
             </div>
+            
+            <div class="about-right">
+              <h3><?php the_field("about-title"); ?></h3>
+              <p><?php the_field("about-text"); ?></p>
 
-            <h3><?php the_field("about-title"); ?></h3>
-            <p><?php the_field("about-text"); ?></p>
+              <h4><?php the_field("social-media-title"); ?></h4>
 
-            <h3><?php the_field("social-media-title"); ?></h3>
+              <?php wp_nav_menu( array(
+                'container' => false,
+                'theme_location' => 'social-menu'
+              )); ?>
+            </div><!-- /.about-right -->
 
-            <?php wp_nav_menu( array(
-              'container' => false,
-              'theme_location' => 'social-menu'
-            )); ?>
+             <div class="about-hidden">
+            <?php $image_url  = get_field('about-image') ?>
+              <img src="<?php echo $image_url['url'] ?> " alt="">
+            </div><!-- /.about-hidden -->
 
-          </div><!-- /.wrapper-narrow -->
+
+          </div><!-- /.wrapper-wide -->
 
         </section> <!-- /.about -->
 
-        <section class="skills clearfix" id="skills"> 
+        <section class="skills clearfix"> 
+
+          <a name="skills"></a>
 
           <div class="wrapper-wide">
 
@@ -78,8 +91,9 @@ get_header();  ?>
           </div> <!-- /.wrapper-wide -->
         </section> <!-- /.skills -->
 
-        <section class="portfolio clearfix" id="portfolio"> 
-
+        <section class="portfolio clearfix"> 
+          
+          <a name="portfolio"></a>
           <div class="wrapper-wide">
           <h3><?php the_field('portfolio-title'); ?></h3>
 
@@ -120,9 +134,12 @@ get_header();  ?>
           
         </section> <!-- /.portfolio -->
 
-        <section class="contact clearfix" id="contact">
+        <section class="contact clearfix">
+          <a name="contact"></a>
           <div class="wrapper-wide clearfix">
             <h3><?php the_field("contact-title"); ?></h3>
+            <p class="email-link">Fill out the form below or email me at <a href="mailto:anya@anyacraig.com">anya@anyacraig.com</a>!</p>
+</p>
             <?php echo do_shortcode( '[contact-form-7 id="9" title="Contact form 1"]' ); ?>
           </div><!-- /.wrapper-wide -->
         </section> <!-- /.contact -->

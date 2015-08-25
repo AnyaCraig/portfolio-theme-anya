@@ -1,11 +1,11 @@
 <footer>
   <div class="container">
-    <!-- NAVBAR -->
+    <!-- NAVBAR 
       <div class="footer-nav">
-        <?php wp_nav_menu( array(
+        ?php wp_nav_menu( array(
           'container' => false,
           'theme_location' => 'footer-menu'
-        )); ?>
+        )); ?> -->
 
     <p>&copy; Anya Craig <?php echo date('Y'); ?></p>
 

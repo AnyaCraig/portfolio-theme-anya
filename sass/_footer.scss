@@ -1,13 +1,15 @@
 footer {
 	clear: both;
-	background-image: url(Images/contemporary_china_white.png);
+	background-image: url(images/stripes-white.png);
 	border-top: 3px solid $coral;
 	z-index: 150;
 	position: relative;
+	text-align: center;
+	height: 80px;
 	
 	p {
-		margin: 40px 0 10px 0;
 		color: black;
-		text-shadow: .5px .5px 0 $coral;
+		line-height: 80px;
+		font-size: 16px;
 	}
 }

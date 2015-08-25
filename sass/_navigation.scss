@@ -10,19 +10,20 @@ ul.menu {
 			padding: 10px;
 			background: #333;
 			color: white;
-			font-family: "Raleway", sans-serif;
+			font-family: "Quicksand", sans-serif;
 
 		}
 	}
 }
 
 .top-menu {
-	background: black;
+	background-image: url(images/stripes.png);
 	height: 80px;
 	border-bottom: 3px solid $coral;
 	color: white;
 	position: relative;
 	z-index: 150;
+	margin-bottom: -80px;
 
 }
 
@@ -41,19 +42,17 @@ ul.menu li a {
 ul.menu li a:hover {
 	border-bottom: 3px solid $coral;
 }
-.footer-nav {
-	text-align: center;
-}
-.footer-nav ul li a {
-	color: black;
+
+i.fa-bars {
+	display:none;
 }
 
 
 .about ul.menu {
 	text-align: left;
+	margin-bottom: 25px;
 }
 .about ul.menu li a {
-	background: black;
 	margin: 0 25px 0 0;
 	transition: .5s all ease-in-out;
 }

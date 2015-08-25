@@ -28,7 +28,7 @@ img {
 
 body {
 	color: #333;
-	/* padding-top: calc(100vh - 80px);*/
+	padding-top: calc(100vh - 80px);
 }
 
 .container {
@@ -61,23 +61,32 @@ body {
 .under-menu {
 	position: relative;
 	z-index: 149;
+	padding-top: 80px;	
+}
+
+a[name="about"],
+a[name="skills"],
+a[name="portfolio"],
+a[name="contact"] {
+	position: relative;
+	top: -80px;
 }
 
 /* ====================== HEADER STYLES ========================= */
 
 .header {
-	background: url(Images/octopus-rubber-stamp-background.jpg) no-repeat fixed; 
+	background: url(images/octopus-rubber-stamp-background.jpg) no-repeat fixed; 
 	background-color: rgba(255,255,255, 0.9);
 	background-blend-mode: screen;
-  	background-size: auto 100%;
+  	background-size: cover;
   	background-position: right;
   	height: calc(100vh - 80px);
   	z-index: 100;
-  	overflow: auto;
+  	overflow: hidden;
 }
 
 .site-headings {
-	margin-top: 40%;
+	margin-top: 65vh;
 	margin-left: 8%;
 	transition: .5s all ease-in-out;
 }
@@ -89,36 +98,72 @@ body {
 
 /* EXTRA NAV STYLES */
 
-/*.top-menu-scrolled,
+.top-menu-scrolled,
 .header {
 	position: fixed;
 	top: 0;
-	width: 100%;*/
-
+	width: 100%;
+}
 /* ====================== ABOUT SECTION ========================= */
 
 .about {
 	min-height: 400px;
-	background-image: url(Images/good-headshot-wide.jpg);
+	background: $whitish;
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 	transition: 1s all ease-in-out;
-	overflow: auto;
+	position: relative;
 }
 
+.about-left, 
+.about-right {
+	float: right;
+	width: 50%;
+
+}
+.wrapper-wide {
+	position: relative;
+	overflow: hidden;
+}
+.about-left{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.about img {
+	display: block;
+	width: 95%;
+}
+
+.about .about-right a .fa {
+	color: $deep;
+	font-size: 25px;
+	transition: .5s all ease-in-out;
+}
+
+.about .about-right a .fa:hover {
+	color: $coral;
+}
 .portrait {
 	display: none;
-	background: url(Images/portrait.jpg) no-repeat center center;
+	background: url(images/portrait.jpg) no-repeat center center;
 	background-size: 100%;
 	width: 250px;
 	height: 250px;
 	border-radius: 50%;
 	margin: 0 auto;
 }
+
+.about-hidden {
+	display: none;
+	clear: both;
+	margin: 0 auto;
+	width: 80%;
+}
 /* ====================== SKILLS SECTION ======================== */
 
 .skills {
-	background-image: url(Images/contemporary_china.png);
+	background-image: url(images/stripes.png);
 	color: white;
 	overflow: auto;
 }
@@ -135,7 +180,7 @@ body {
 button.resume {
 	clear: both;
 	display: block;
-	margin: 30px 0;
+	margin: 30px 0 50px 0;
 	height: 40px;
 	border: 3px solid $coral;
 	background: transparent;
@@ -152,25 +197,25 @@ button.resume:hover {
 }
 
 
+
 /* ====================== PORTFOLIO SECTION ===================== */
 
 .portfolio {
-	background-image: url(Images/contemporary_china_white.png);
+	background-image: url(images/stripes-white.png);
 	overflow: auto;
 }
 
 .portfolio-item {
 	height: 380px;
-	border-top: 3px solid black;
+	border-top: 3px solid $deep;
 	border-right: 3px solid $coral;
 	border-bottom: 3px solid $coral;
-	border-left: 3px solid black;
+	border-left: 3px solid $deep;
 	width: 100%;
-	margin: 30px auto 60px auto;
+	margin: 30px auto 80px auto;
 	clear: both;
 	overflow: hidden;
-	// background-image: url(Images/contemporary_china.png);
-	background: rgba(0,0,0,0.88);
+	background-image: url(images/stripes.png);;
 }
 
 .portfolio-item-left,
@@ -202,7 +247,7 @@ button.resume:hover {
 		font-size: 1em;
 		padding: 0;
 		margin: 0 0 20px 0;
-		font-family: "Raleway", sans-serif;
+		font-family: "Quicksand", sans-serif;
 		font-weight: 300;
 	}
 	
@@ -229,7 +274,7 @@ button.resume:hover {
 /* ====================== CONTACT SECTION ======================== */
 
 .contact {
-	background: url(Images/octopus-inverse-background.jpg);
+	background: url(images/octopus-inverse-background.jpg);
 	background-color: rgba(0,0,0, 0.75);
 	background-blend-mode: multiply;
 	background-position: right top;
@@ -264,7 +309,7 @@ textarea {
 
 input[type=submit] {
 	width: 150px;
-	margin: 25px 0;
+	margin: 25px 0 45px 0;
 	height: 40px;
 	border: 3px solid $coral;
 	background: transparent;
@@ -290,6 +335,19 @@ input[type=submit]:hover {
 
 .contact span.wpcf7-not-valid-tip {
 	color: $orange;
+}
+
+.contact a {
+	color: $coral;
+	transition: .5s all ease-in-out;
+}
+
+.contact a:hover {
+	color:$orange;
+}
+
+p.email-link {
+	font-size: 1.2em;
 }
 
 /* ========================== MEDIA QUERIES ============================== */
@@ -345,12 +403,20 @@ input[type=submit]:hover {
 		margin-right: 10px;
 	}
 
+	.about img {
+		width: 100%;
+	}
+
 	.about ul.menu li {
 		padding: 0;
 	}
 	
 	.wrapper-wide {
 		max-width: 900px;
+	}
+
+	.portfolio-item {
+		height: auto;
 	}
 }
 @media(max-width:1100px) {
@@ -403,6 +469,18 @@ input[type=submit]:hover {
 	.button.resume {
 		margin-top: 20px;
 	}
+
+	.about-left {
+		display: none;
+	}
+
+	.about-right {
+		width: 100%;
+	}
+
+	.about-hidden {
+		display: block;
+	}
 }
 @media(max-width: 860px) {
 	
@@ -443,13 +521,18 @@ input[type=submit]:hover {
 		display: block;
 		line-height: 50px;
 	}
-	.header {
-		height: calc(100vh - 260px);
+	// .header {
+	// 	height: calc(100vh - 260px);
 
-	}
-	.top-menu {
-		height: 260px;
-	}
+	// }
+
+	// a[name="about"],
+	// a[name="skills"],
+	// a[name="portfolio"],
+	// a[name="contact"] {
+	// 	position: relative;
+	// 	top: -260px;
+	// }
 
 	.site-headings {
 		margin-top: 50%;
@@ -457,6 +540,16 @@ input[type=submit]:hover {
 
 	.wrapper-wide {
 		max-width: 400px;
+	}
+
+	.top-menu ul.menu {
+		display: none;
+	}
+
+	i.fa-bars {
+		display: block;
+		font-size: 35px;
+		line-height: 80px;
 	}
 }
 

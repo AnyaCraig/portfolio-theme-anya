@@ -4,7 +4,7 @@ $(function(){
 	var menu = $(".top-menu");
 
 	$(window).scroll(function() {
-		if($(this).scrollTop() > (window.innerheight - 80)) {
+		if($(this).scrollTop() > (window.innerHeight - 80)) {
 			menu.addClass("top-menu-scrolled");
 
 		}
