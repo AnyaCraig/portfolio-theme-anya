@@ -12,4 +12,16 @@ $(function(){
 			menu.removeClass("top-menu-scrolled");
 		}
 	});
+
+	$('.fa-bars').on('click', function(){
+	  $('.drop-menu ul.menu').slideToggle(500);
+	  $('.drop-menu ul.menu a').on('click', function() {
+	  	$('.drop-menu ul.menu').fadeOut();
+
+	  });
+
+
+	});
+
+
 });

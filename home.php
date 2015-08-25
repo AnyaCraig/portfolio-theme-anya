@@ -20,11 +20,18 @@ get_header();  ?>
 
         <!-- NAVBAR -->
       <section class="top-menu clearfix">
+        <i class="fa fa-bars"></i>
         <?php wp_nav_menu( array(
           'container' => false,
           'theme_location' => 'primary'
         )); ?>
-        <i class="fa fa-bars"></i>
+
+        <div class="drop-menu">
+          <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'primary'
+        )); ?>
+        </div>
       </section>
       
       <div class="under-menu">

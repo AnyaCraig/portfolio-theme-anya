@@ -207,10 +207,10 @@ button.resume:hover {
 
 .portfolio-item {
 	height: 380px;
-	border-top: 3px solid $deep;
+	// border-top: 3px solid $deep;
 	border-right: 3px solid $coral;
 	border-bottom: 3px solid $coral;
-	border-left: 3px solid $deep;
+	// border-left: 3px solid $deep;
 	width: 100%;
 	margin: 30px auto 80px auto;
 	clear: both;
@@ -300,6 +300,8 @@ textarea {
 	border-right: 3px solid $coral;
 	border-bottom: 3px solid $coral;
 	height: 45px;
+	padding: 10px;
+	margin-top: 5px;
 }
 
 textarea {
@@ -340,6 +342,7 @@ input[type=submit]:hover {
 .contact a {
 	color: $coral;
 	transition: .5s all ease-in-out;
+	text-shadow: 0 0 10px black;
 }
 
 .contact a:hover {
@@ -521,21 +524,9 @@ p.email-link {
 		display: block;
 		line-height: 50px;
 	}
-	// .header {
-	// 	height: calc(100vh - 260px);
-
-	// }
-
-	// a[name="about"],
-	// a[name="skills"],
-	// a[name="portfolio"],
-	// a[name="contact"] {
-	// 	position: relative;
-	// 	top: -260px;
-	// }
 
 	.site-headings {
-		margin-top: 50%;
+		margin-top: 40vh;
 	}
 
 	.wrapper-wide {
@@ -545,11 +536,23 @@ p.email-link {
 	.top-menu ul.menu {
 		display: none;
 	}
+	.drop-menu ul.menu {	
+		width: 70%;
+		background: rgba(0,0,0,0.85);
+		margin: auto;
+		// position: relative;
+		// top: 80px;
+	}
 
 	i.fa-bars {
 		display: block;
 		font-size: 35px;
 		line-height: 80px;
+		transition: .5s all ease-in-out;
+	}
+
+	i.fa-bars:hover {
+		color: $coral;
 	}
 }
 
