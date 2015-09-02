@@ -93,7 +93,7 @@ get_header();  ?>
               <?php wp_reset_postdata(); ?>
 
               <div class="button-holder">
-                <button class="resume">download my resum&eacute;</button>    
+                <a href="anya-craig-resume.pdf"><button class="resume">download my resum&eacute;</button></a>    
               </div> <!-- /.button-holder -->
 
           </div> <!-- /.wrapper-wide -->

@@ -168,15 +168,6 @@ a[name="contact"] {
 .about .about-right a .fa:hover {
 	color: $coral;
 }
-.portrait {
-	display: none;
-	background: url(images/portrait.jpg) no-repeat center center;
-	background-size: 100%;
-	width: 250px;
-	height: 250px;
-	border-radius: 50%;
-	margin: 0 auto;
-}
 
 .about-hidden {
 	display: none;
@@ -192,9 +183,13 @@ a[name="contact"] {
 	overflow: auto;
 }
 
+.skills p {
+	padding-bottom: 25px;
+}
+
 .skill-item {
 	float: left;
-	margin: 25px 25px 25px 0;
+	margin: 0 25px 25px 0;
 	padding-bottom: 3px;
 	color: $coral;
 	font-weight: 600;
@@ -231,10 +226,8 @@ button.resume:hover {
 
 .portfolio-item {
 	height: 380px;
-	// border-top: 3px solid $deep;
 	border-right: 3px solid $coral;
 	border-bottom: 3px solid $coral;
-	// border-left: 3px solid $deep;
 	width: 100%;
 	margin: 30px auto 80px auto;
 	clear: both;
@@ -251,7 +244,7 @@ button.resume:hover {
 .portfolio-item-left {
 	padding-bottom: 50%;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center top;
 	background-size: cover;
 
 	img {
@@ -476,9 +469,7 @@ p.email-link {
 	.wrapper-wide {
 		max-width: 700px;
 	}
-	.skills p {
-		margin-bottom: 20px;
-	}
+	
 	.skill-item {
 		margin:10px 25px 10px 0;
 	}
